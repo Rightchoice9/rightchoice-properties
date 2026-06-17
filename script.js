@@ -1,17 +1,12 @@
 
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
-
 if (toggle && menu) {
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
 }
-
-const forms = document.querySelectorAll('form');
-forms.forEach(form => {
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    alert('Thanks — this form is ready to connect to your email, Wix, CRM or backend.');
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Form ready. Next step: connect this to your email, Google Sheets, CRM or website backend.');
   });
 });
